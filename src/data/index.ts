@@ -10,7 +10,7 @@ export const teamMembers: TeamMember[] = [
     id: "ogechi",
     name: "Ogechi Ogobnnaya",
     role: "Founder & Visioneer",
-    image: "/images/ogechi.jpeg",
+    image: "/images/Ogechi.jpeg",
   },
   {
     id: "dipo",
