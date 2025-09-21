@@ -4,14 +4,14 @@ import Image from "next/image";
 
 const AboutSection: React.FC = () => {
   return (
-    <section className="overflow-hidden bg-gray-50 sm:grid sm:grid-cols-2 dark:bg-gray-900">
-      <div className="p-8 md:p-12 lg:px-16 lg:py-24">
-        <div className="mx-auto max-w-xl text-left ltr:sm:text-left rtl:sm:text-right">
+    <section className="overflow-hidden bg-gray-50 sm:grid sm:grid-cols-2 dark:bg-gray-900 max-w-[1870px]">
+      <div className="py-8 md:py-12 lg:py-24 w-[90%] sm:w-[85%] sm:ml-auto mx-auto">
+        <div className="sm:ml-[7.5%] mx-auto  sm:max-w-[700px] max-w-full text-left ltr:sm:text-left rtl:sm:text-right">
           <h2 className="text-2xl font-bold text-gray-900 md:text-3xl dark:text-white">
             Who we are
           </h2>
 
-          <p className="hidden text-gray-500 md:mt-4 md:block dark:text-gray-300">
+          <p className=" text-gray-500 md:mt-4 md:block dark:text-gray-300">
             WhollyHer is a community dedicated to helping women thrive in every
             aspect of life — spiritually, mentally, emotionally, and
             professionally. We create spaces for growth, conversations that

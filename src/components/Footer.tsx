@@ -5,7 +5,7 @@ import Image from "next/image";
 const Footer: React.FC = () => {
   return (
     <footer className="bg-white dark:bg-gray-900">
-      <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-[1870px] w-[90%] sm:w-[85%] py-16">
         <div className="lg:flex lg:items-start lg:gap-8">
           <div className="text-teal-600 dark:text-teal-300">
             <Image
@@ -42,7 +42,7 @@ const Footer: React.FC = () => {
                     type="email"
                     id="UserEmail"
                     placeholder="john@whollyher.com"
-                    className="w-full border-none focus:border-transparent focus:ring-transparent sm:text-sm dark:bg-gray-900 dark:text-white"
+                    className="w-full border-none focus:border-transparent focus:ring-transparent focus:outline-none text-xl dark:bg-gray-900 dark:text-white"
                   />
 
                   <button className="mt-1 w-full bg-purple-700 px-6 py-3 text-sm font-bold tracking-wide text-white uppercase transition-none hover:bg-purple-800 sm:mt-0 sm:w-auto sm:shrink-0">

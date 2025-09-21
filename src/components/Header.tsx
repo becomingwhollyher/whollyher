@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import DarkModeToggle from "./DarkModeToggle";
+import { MobileMenuButton } from "./MobileMenuButton";
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,8 +15,8 @@ const Header: React.FC = () => {
 
   return (
     <header className="bg-white dark:bg-gray-900 sticky top-0 z-50 shadow-sm">
-      <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
+      <div className="mx-auto max-w-[1780px]">
+        <div className="w-[90%] md:w-[85%] mx-auto flex h-16 items-center justify-between">
           <div className="flex-1 md:flex md:items-center md:gap-12">
             <Link className="block text-teal-600 dark:text-teal-300" href="/">
               <span className="sr-only">Home</span>
@@ -30,67 +31,66 @@ const Header: React.FC = () => {
             </Link>
           </div>
 
-          <div className="md:flex md:items-center md:gap-12">
-            <nav
-              aria-label="Global"
+          <div className="flex items-center gap-5">
+            <div
               className={`${
                 isMenuOpen ? "block" : "hidden"
-              } md:block absolute md:relative top-16 md:top-0 left-0 md:left-auto w-full md:w-auto bg-white md:bg-transparent dark:bg-gray-900 md:dark:bg-transparent shadow-lg md:shadow-none p-4 md:p-0`}
+              } xl:flex gap-16 absolute max-w-[1780px] xl:relative top-16 xl:top-0 left-0 xl:left-auto w-full xl:w-auto bg-white xl:bg-transparent dark:bg-gray-900 xl:dark:bg-transparent shadow-lg xl:shadow-none p-4 xl:p-0`}
             >
-              <ul className="flex flex-col md:flex-row items-start md:items-center gap-6 text-sm">
-                <li>
-                  <Link
-                    className="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
-                    href="/about"
-                  >
-                    About
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
-                    href="/community"
-                  >
-                    Community
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
-                    href="/programs"
-                  >
-                    Programs
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
-                    href="/services"
-                  >
-                    Services
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
-                    href="/resources"
-                  >
-                    Resources
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
-                    href="/get-involved"
-                  >
-                    Get Involved
-                  </Link>
-                </li>
-              </ul>
-            </nav>
+              <nav aria-label="Global">
+                <ul className="flex flex-col w-[90%] sm:w-[85%] mx-auto xl:flex-row h-full xl:items-center items-start gap-6 xl:text-sm text-xl ">
+                  <li>
+                    <Link
+                      className="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
+                      href="/about"
+                    >
+                      About
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
+                      href="/community"
+                    >
+                      Community
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
+                      href="/programs"
+                    >
+                      Programs
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
+                      href="/services"
+                    >
+                      Services
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="text-gray-500 transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
+                      href="/resources"
+                    >
+                      Resources
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="text-gray-500 whitespace-nowrap transition hover:text-gray-500/75 dark:text-white dark:hover:text-white/75"
+                      href="/get-involved"
+                    >
+                      Get Involved
+                    </Link>
+                  </li>
+                </ul>
+              </nav>
 
-            <div className="flex items-center gap-4">
-              <div className="sm:flex sm:gap-4">
+              <div className="flex gap-4 w-[90%] sm:w-[85%] mx-auto py-8">
                 <Link
                   className="rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white shadow-sm hover:bg-teal-700 transition-colors"
                   href="/login"
@@ -98,39 +98,21 @@ const Header: React.FC = () => {
                   Login
                 </Link>
 
-                <div className="hidden sm:flex">
-                  <Link
-                    className="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600 hover:bg-gray-200 transition-colors dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700"
-                    href="/counselor"
-                  >
-                    Meet a Counselor
-                  </Link>
-                </div>
-              </div>
-              <DarkModeToggle />
-
-              <div className="block md:hidden">
-                <button
-                  onClick={toggleMenu}
-                  className="rounded-sm bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75 dark:bg-gray-800 dark:text-white dark:hover:text-white/75"
-                  aria-label="Toggle menu"
+                <Link
+                  className="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600 hover:bg-gray-200 transition-colors dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700"
+                  href="/counselor"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="size-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M4 6h16M4 12h16M4 18h16"
-                    />
-                  </svg>
-                </button>
+                  Meet a Counselor
+                </Link>
               </div>
+            </div>
+
+            <div className={`${isMenuOpen ? "block" : "hidden xl:block"}`}>
+              <DarkModeToggle />
+            </div>
+
+            <div className="block xl:hidden">
+              <MobileMenuButton onClick={toggleMenu} isOpen={isMenuOpen} />
             </div>
           </div>
         </div>

@@ -1,11 +1,11 @@
-import React from 'react';
-import Image from 'next/image';
-import { corePillars } from '@/data';
+import React from "react";
+import Image from "next/image";
+import { corePillars } from "@/data";
 
 const CorePillars: React.FC = () => {
   return (
     <section className="bg-white dark:bg-gray-900 py-16">
-      <div className="max-w-6xl mx-auto px-6 lg:px-8 text-center">
+      <div className="max-w-[1780px] w-[90%] sm:w-[85%] mx-auto text-center">
         {/* Section Heading */}
         <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
           Our Core Pillars
@@ -18,10 +18,7 @@ const CorePillars: React.FC = () => {
         {/* Grid */}
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {corePillars.map((pillar) => (
-            <div
-              key={pillar.id}
-              className="card max-w-xs mx-auto"
-            >
+            <div key={pillar.id} className="card mx-auto">
               <div className="relative h-56 w-full">
                 <Image
                   src={pillar.image}
