@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const HeroBanner: React.FC = () => {
   return (
-    <section className="bg-white lg:grid lg:h-[600px] sm:my-20 my-10 lg:place-content-center dark:bg-gray-900">
+    <section className="bg-white lg:grid lg:h-[600px] sm:py-20 py-10 lg:place-content-center dark:bg-gray-900">
       <div className="mx-auto w-[90%] sm:w-[85%] max-w-[1870px]">
         <div className="w-full">
           <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-7xl dark:text-white">
